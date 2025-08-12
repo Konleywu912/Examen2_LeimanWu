@@ -60,7 +60,7 @@ public class LibroGUI extends JFrame {
         setVisible(true);
     }
 
-    // Método para abrir diálogo para agregar libro
+    
     private void abrirDialogoAgregar() {
         JDialog dialog = new JDialog(this, "Agregar Libro", true);
         dialog.setLayout(null);
@@ -134,7 +134,6 @@ public class LibroGUI extends JFrame {
             return;
         }
 
-        // Obtener datos del libro seleccionado
         int id = (int) modeloTabla.getValueAt(fila, 0);
         String tituloActual = (String) modeloTabla.getValueAt(fila, 1);
         String autorActual = (String) modeloTabla.getValueAt(fila, 2);
@@ -229,7 +228,6 @@ public class LibroGUI extends JFrame {
         dialog.setVisible(true);
     }
 
-    // Método para eliminar libro seleccionado
     private void eliminarLibro() {
         int fila = tablaLibros.getSelectedRow();
         if (fila == -1) {
